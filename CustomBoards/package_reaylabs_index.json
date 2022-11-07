@@ -9,7 +9,7 @@
       "platforms":
       [
         {
-          "name": "ReayLabs Arduino Boards",
+          "name": "reaylabs",
           "architecture": "samd",
           "version": "1.0.0",
           "category": "Contributed",
