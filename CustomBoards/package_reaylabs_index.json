@@ -13,10 +13,10 @@
           "architecture": "samd",
           "version": "1.0.0",
           "category": "Contributed",
-          "url": "https://github.com/reaylabs/RLArduinoBoards/blob/master/CustomBoards/RoboHat-0.0.26.zip?raw=true",
-          "archiveFileName": "RoboHat-0.0.26.zip",
-          "checksum": "SHA-256:1927B1B20B0FFA36D1F1BFBA028F90756CEE82B42227C898417ABCFA56ADC6F6",
-          "size": "8773152",
+          "url": "https://github.com/reaylabs/RLArduinoBoards/blob/master/CustomBoards/ReayLabs-1.0.0.zip?raw=true",
+          "archiveFileName": "ReayLabs-1.0.0.zip",
+          "checksum": "SHA-256:8ddbbdf83054e5c38a894ba5a2cd2219ec112d562c1c29cf7e69e82476e5aa2fce1c06127e6a77d6fc267a769b711a0bfb0999eb3743476b96a804f58d1cc446",
+          "size": "2180895",
           "help": {
             "online": "https://reaylabs.com"
           },

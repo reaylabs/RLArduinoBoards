@@ -1,0 +1,76 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.cache=Cache
+menu.speed=CPU Speed
+menu.opt=Optimize
+menu.maxqspi=Max QSPI
+menu.usbstack=USB Stack
+menu.debug=Debug
+
+# -----------------------------------
+# RL1400 (SAMD21)
+# -----------------------------------
+reaylabs_rl1400.name=RL1400 (SAMD21)
+
+# https://pid.codes
+reaylabs_rl1400.vid.0=0x1209
+reaylabs_rl1400.pid.0=0x000E
+
+# Upload
+reaylabs_rl1400.upload.tool=bossac18
+reaylabs_rl1400.upload.protocol=sam-ba
+reaylabs_rl1400.upload.maximum_size=262144
+reaylabs_rl1400.upload.offset=0x2000
+reaylabs_rl1400.upload.use_1200bps_touch=true
+reaylabs_rl1400.upload.wait_for_upload_port=true
+reaylabs_rl1400.upload.native_usb=true
+
+# Build
+reaylabs_rl1400.build.mcu=cortex-m0plus
+reaylabs_rl1400.build.f_cpu=48000000L
+reaylabs_rl1400.build.usb_product="RL1400"
+reaylabs_rl1400.build.usb_manufacturer="ReayLabs"
+reaylabs_rl1400.build.board=RL1400
+reaylabs_rl1400.build.core=arduino
+reaylabs_rl1400.build.extra_flags=-D__SAMD21G18A__ -DCRYSTALLESS -DADAFRUIT_ITSYBITSY_M0 -DARM_MATH_CM0PLUS {build.usb_flags}
+reaylabs_rl1400.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+reaylabs_rl1400.build.openocdscript=openocd_scripts/itsybitsy_m0.cfg
+reaylabs_rl1400.build.variant=itsybitsy_m0
+reaylabs_rl1400.build.variant_system_lib=
+reaylabs_rl1400.build.vid=0x1209
+reaylabs_rl1400.build.pid=0x000E
+reaylabs_rl1400.bootloader.tool=openocd
+reaylabs_rl1400.bootloader.file=itsybitsyM0/bootloader-itsybitsy_m0-v2.0.0-adafruit.5.bin
+
+# Menu
+reaylabs_rl1400.menu.opt.small=Small (-Os) (standard)
+reaylabs_rl1400.menu.opt.small.build.flags.optimize=-Os
+reaylabs_rl1400.menu.opt.fast=Fast (-O2)
+reaylabs_rl1400.menu.opt.fast.build.flags.optimize=-O2
+reaylabs_rl1400.menu.opt.faster=Faster (-O3)
+reaylabs_rl1400.menu.opt.faster.build.flags.optimize=-O3
+reaylabs_rl1400.menu.opt.fastest=Fastest (-Ofast)
+reaylabs_rl1400.menu.opt.fastest.build.flags.optimize=-Ofast
+reaylabs_rl1400.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+reaylabs_rl1400.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+reaylabs_rl1400.menu.usbstack.arduino=Arduino
+reaylabs_rl1400.menu.usbstack.tinyusb=TinyUSB
+reaylabs_rl1400.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+reaylabs_rl1400.menu.debug.off=Off
+reaylabs_rl1400.menu.debug.on=On
+reaylabs_rl1400.menu.debug.on.build.flags.debug=-g
+
