@@ -1,6 +1,15 @@
 # RLArduinoBoards
-Repository for storing Arduino related files and custom board definition.
+Repository for custom Arduino boards.
 
+## Supported Boards
+### RL1400
+<ul>
+  <li>Based on ItsyBitsy M0</li>
+  <li>Upgraded to a USBC connector for increased current capability.
+  <li>VBus and VBat diodes, D5 level shifter, SPI flash and dotstar removed.</li>
+  <li>2k I2C EEprom added at address 0x50 for storing calibration data.</li>
+  <li>Changed the pinout to sequential order. Also added the CC1 and CC2 USBC pins</li>
+  </ul>
 
 ## Arduino IDE
 
