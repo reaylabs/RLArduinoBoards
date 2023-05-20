@@ -11,11 +11,11 @@
         {
           "name": "ReayLabs Arduino Boards",
           "architecture": "samd",
-          "version": "1.1.0",
+          "version": "1.0.0",
           "category": "Contributed",
-          "url": "https://github.com/reaylabs/RLArduinoBoards/blob/main/CustomBoards/ReayLabs-1.1.0.zip?raw=true",
-          "archiveFileName": "ReayLabs-1.1.0.zip",
-          "checksum": "SHA-256:fc186a41f0577a0485777cd8be2d6cb49fed1de7c3b062450ddfbe39bf2a0de9",
+          "url": "https://github.com/reaylabs/RLArduinoBoards/blob/main/CustomBoards/ReayLabs-1.0.0.zip?raw=true",
+          "archiveFileName": "ReayLabs-1.0.0.zip",
+          "checksum": "SHA-256:8daaa41f415d6a63bd7e1fbb9e4642e19631b70c797dabc0a0fe841cc3c1618a",
           "size": "2234743",
           "help": {
             "online": "https://reaylabs.com"
@@ -23,10 +23,7 @@
           "boards": [
             {
               "name": "RL1400"
-            },
-            {
-              "name": "RL2000"
-            },       
+            }
           ],
           "toolsDependencies": [
             {
