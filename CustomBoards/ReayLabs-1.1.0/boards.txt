@@ -28,7 +28,7 @@ reaylabs_rl1400.name=RL1400 (SAMD21)
 
 # https://pid.codes
 reaylabs_rl1400.vid.0=0x1209
-reaylabs_rl1400.pid.0=0x000E
+reaylabs_rl1400.pid.0=0x2050
 
 # Upload
 reaylabs_rl1400.upload.tool=bossac18
@@ -52,9 +52,9 @@ reaylabs_rl1400.build.openocdscript=openocd_scripts/itsybitsy_m0.cfg
 reaylabs_rl1400.build.variant=itsybitsy_m0
 reaylabs_rl1400.build.variant_system_lib=
 reaylabs_rl1400.build.vid=0x1209
-reaylabs_rl1400.build.pid=0x000E
+reaylabs_rl1400.build.pid=0x2050
 reaylabs_rl1400.bootloader.tool=openocd
-reaylabs_rl1400.bootloader.file=itsybitsyM0/bootloader-itsybitsy_m0-v2.0.0-adafruit.5.bin
+reaylabs_rl1400.bootloader.file=RL1400/bootloader-rl1400-v3.14.0-10-gb17ca18-dirty.bin
 
 # Menu
 reaylabs_rl1400.menu.opt.small=Small (-Os) (standard)
@@ -73,4 +73,57 @@ reaylabs_rl1400.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
 reaylabs_rl1400.menu.debug.off=Off
 reaylabs_rl1400.menu.debug.on=On
 reaylabs_rl1400.menu.debug.on.build.flags.debug=-g
+
+# -----------------------------------
+# RL2000 (SAMD21)
+# -----------------------------------
+reaylabs_rl2000.name=RL2000 (SAMD21)
+
+# https://pid.codes
+reaylabs_rl2000.vid.0=0x1209
+reaylabs_rl2000.pid.0=0x2051
+
+# Upload
+reaylabs_rl2000.upload.tool=bossac18
+reaylabs_rl2000.upload.protocol=sam-ba
+reaylabs_rl2000.upload.maximum_size=262144
+reaylabs_rl2000.upload.offset=0x2000
+reaylabs_rl2000.upload.use_1200bps_touch=true
+reaylabs_rl2000.upload.wait_for_upload_port=true
+reaylabs_rl2000.upload.native_usb=true
+
+# Build
+reaylabs_rl2000.build.mcu=cortex-m0plus
+reaylabs_rl2000.build.f_cpu=48000000L
+reaylabs_rl2000.build.usb_product="RL2000"
+reaylabs_rl2000.build.usb_manufacturer="ReayLabs"
+reaylabs_rl2000.build.board=RL2000
+reaylabs_rl2000.build.core=arduino
+reaylabs_rl2000.build.extra_flags=-D__SAMD21G18A__ -DCRYSTALLESS -DADAFRUIT_ITSYBITSY_M0 -DARM_MATH_CM0PLUS {build.usb_flags}
+reaylabs_rl2000.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+reaylabs_rl2000.build.openocdscript=openocd_scripts/itsybitsy_m0.cfg
+reaylabs_rl2000.build.variant=itsybitsy_m0
+reaylabs_rl2000.build.variant_system_lib=
+reaylabs_rl2000.build.vid=0x1209
+reaylabs_rl2000.build.pid=0x2051
+reaylabs_rl2000.bootloader.tool=openocd
+reaylabs_rl2000.bootloader.file=RL2000/bootloader-rl2000-v3.14.0-10-gb17ca18-dirty.bin
+
+# Menu
+reaylabs_rl2000.menu.opt.small=Small (-Os) (standard)
+reaylabs_rl2000.menu.opt.small.build.flags.optimize=-Os
+reaylabs_rl2000.menu.opt.fast=Fast (-O2)
+reaylabs_rl2000.menu.opt.fast.build.flags.optimize=-O2
+reaylabs_rl2000.menu.opt.faster=Faster (-O3)
+reaylabs_rl2000.menu.opt.faster.build.flags.optimize=-O3
+reaylabs_rl2000.menu.opt.fastest=Fastest (-Ofast)
+reaylabs_rl2000.menu.opt.fastest.build.flags.optimize=-Ofast
+reaylabs_rl2000.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+reaylabs_rl2000.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+reaylabs_rl2000.menu.usbstack.arduino=Arduino
+reaylabs_rl2000.menu.usbstack.tinyusb=TinyUSB
+reaylabs_rl2000.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+reaylabs_rl2000.menu.debug.off=Off
+reaylabs_rl2000.menu.debug.on=On
+reaylabs_rl2000.menu.debug.on.build.flags.debug=-g
 

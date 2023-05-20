@@ -3,7 +3,7 @@ Repository for custom Arduino boards.
 
 ## Supported Boards
 ### RL1400
-<ul>
+### RL2000
   <li>Based on ItsyBitsy M0</li>
   <li>Upgraded to a USBC connector for increased current capability.
   <li>VBus and VBat diodes, D5 level shifter, SPI flash and dotstar removed.</li>
@@ -19,7 +19,7 @@ Copy and paste the following URL into the File > Preferences > "Additional Board
 https://raw.githubusercontent.com/reaylabs/RLArduinoBoards/master/CustomBoards/package_reaylabs_index.json
 ```
 
-The latest version is 1.0.0
+The latest version is 1.1.0
 
 Make sure to also install the Arduino SAMD Library at the same time.
 
