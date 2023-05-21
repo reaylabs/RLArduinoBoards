@@ -127,3 +127,56 @@ reaylabs_rl2000.menu.debug.off=Off
 reaylabs_rl2000.menu.debug.on=On
 reaylabs_rl2000.menu.debug.on.build.flags.debug=-g
 
+# -----------------------------------
+# IthProbe (SAMD21)
+# -----------------------------------
+reaylabs_IthProbe.name=IthProbe (SAMD21)
+
+# https://pid.codes
+reaylabs_IthProbe.vid.0=0x1209
+reaylabs_IthProbe.pid.0=0x2052
+
+# Upload
+reaylabs_IthProbe.upload.tool=bossac18
+reaylabs_IthProbe.upload.protocol=sam-ba
+reaylabs_IthProbe.upload.maximum_size=262144
+reaylabs_IthProbe.upload.offset=0x2000
+reaylabs_IthProbe.upload.use_1200bps_touch=true
+reaylabs_IthProbe.upload.wait_for_upload_port=true
+reaylabs_IthProbe.upload.native_usb=true
+
+# Build
+reaylabs_IthProbe.build.mcu=cortex-m0plus
+reaylabs_IthProbe.build.f_cpu=48000000L
+reaylabs_IthProbe.build.usb_product="IthProbe"
+reaylabs_IthProbe.build.usb_manufacturer="ReayLabs"
+reaylabs_IthProbe.build.board=IthProbe
+reaylabs_IthProbe.build.core=arduino
+reaylabs_IthProbe.build.extra_flags=-D__SAMD21G18A__ -DCRYSTALLESS -DADAFRUIT_ITSYBITSY_M0 -DARM_MATH_CM0PLUS {build.usb_flags}
+reaylabs_IthProbe.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+reaylabs_IthProbe.build.openocdscript=openocd_scripts/itsybitsy_m0.cfg
+reaylabs_IthProbe.build.variant=itsybitsy_m0
+reaylabs_IthProbe.build.variant_system_lib=
+reaylabs_IthProbe.build.vid=0x1209
+reaylabs_IthProbe.build.pid=0x2052
+reaylabs_IthProbe.bootloader.tool=openocd
+reaylabs_IthProbe.bootloader.file=IthProbe/update-bootloader-IthProbe-v3.14.0-10-gb17ca18-dirty.uf2
+
+# Menu
+reaylabs_IthProbe.menu.opt.small=Small (-Os) (standard)
+reaylabs_IthProbe.menu.opt.small.build.flags.optimize=-Os
+reaylabs_IthProbe.menu.opt.fast=Fast (-O2)
+reaylabs_IthProbe.menu.opt.fast.build.flags.optimize=-O2
+reaylabs_IthProbe.menu.opt.faster=Faster (-O3)
+reaylabs_IthProbe.menu.opt.faster.build.flags.optimize=-O3
+reaylabs_IthProbe.menu.opt.fastest=Fastest (-Ofast)
+reaylabs_IthProbe.menu.opt.fastest.build.flags.optimize=-Ofast
+reaylabs_IthProbe.menu.opt.dragons=Here be dragons (-Ofast -funroll-loops)
+reaylabs_IthProbe.menu.opt.dragons.build.flags.optimize=-Ofast -funroll-loops
+reaylabs_IthProbe.menu.usbstack.arduino=Arduino
+reaylabs_IthProbe.menu.usbstack.tinyusb=TinyUSB
+reaylabs_IthProbe.menu.usbstack.tinyusb.build.flags.usbstack=-DUSE_TINYUSB
+reaylabs_IthProbe.menu.debug.off=Off
+reaylabs_IthProbe.menu.debug.on=On
+reaylabs_IthProbe.menu.debug.on.build.flags.debug=-g
+
