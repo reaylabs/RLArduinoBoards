@@ -4,6 +4,7 @@ Repository for custom Arduino boards.
 ## Supported Boards
 ### RL1400
 ### RL2000
+### IthProbe
   <li>Based on ItsyBitsy M0</li>
   <li>Upgraded to a USBC connector for increased current capability.
   <li>VBus and VBat diodes, D5 level shifter, SPI flash and dotstar removed.</li>
